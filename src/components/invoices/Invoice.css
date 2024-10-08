@@ -1,12 +1,23 @@
-/* Style for the invoice form */
-.invoice-form {
+/* Style for the container to center the form */
+.container {
     display: flex;
-    width: 100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* Horizontally centers the form */
+    align-items: center; /* Vertically centers the form */
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Style for the invoice form */
+  .invoice-form {
+    display: flex;
+    flex-direction: column;
     gap: 15px; /* Add spacing between form fields */
     max-width: 300px;
     margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .invoice-form label {
@@ -19,6 +30,10 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 100%;
+  }
+  
+  .invoice-form input:invalid {
+    border-color: red; /* Red border if invalid input */
   }
   
   .invoice-form button {
